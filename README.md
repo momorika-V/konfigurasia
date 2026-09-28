@@ -31,6 +31,7 @@
 - Python 3.8+
 - Модули стандартной библиотеки:
   `os`, `sys`, `shlex`, `getpass`, `socket`.
+- Команда для запуска: python src/main.py
 - Перечислить 10 сценариев проверки: запуск приложения,
 раскрытие переменных и тильды, обработка кавычек, неизвестные
 команды, незакрытые кавычки, пустой ввод, exit.
@@ -64,3 +65,33 @@
 
 
 вывод:parse error: No closing quotation
+
+
+ввод:ls hello
+
+
+вывод: ls: stub, arguments: ['hello']
+
+
+ввод: cd test
+
+
+вывод: cd: stub, arguments: ['test']
+
+
+ввод: ls $USERNAME
+
+
+вывод: ls: stub, arguments: ['viki']
+
+
+ввод: ls one "hello world" three
+
+
+вывод: ls: stub, arguments: ['one', 'hello world', 'three']
+
+
+ввод: ls "unclosed
+
+
+вывод: parse error: No closing quotation

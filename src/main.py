@@ -72,7 +72,6 @@ def main() -> int:
 
         line = expand_line(line)
         tokens = parse_line(line)
-
         if not tokens:
             continue
 
