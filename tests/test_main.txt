@@ -1,0 +1,15 @@
+"""Тесты парсера эмулятора."""
+
+from src.main import parse_line
+
+
+def test_parse_simple():
+    assert parse_line("ls -l /home") == ["ls", "-l", "/home"]
+
+
+def test_parse_quotes():
+    assert parse_line('cd "my dir"') == ["cd", "my dir"]
+
+
+def test_parse_error():
+    assert parse_line('ls "abc') is None
